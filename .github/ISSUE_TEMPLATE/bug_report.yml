@@ -1,0 +1,79 @@
+name: Bug report
+description: Report something that PingPanda does not do the way it should
+title: "[bug] "
+labels: ["soc-s1", "type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+
+        Please fill in every section, an empty section slows the review down.
+        Do **not** include a fix in the issue, the reviewers will guide you.
+
+  - type: input
+    id: version
+    attributes:
+      label: PingPanda version
+      description: The output of `python url-status-checker.py --version`
+      placeholder: StatusChecker.py version 1.0
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: The output of `python --version`
+      placeholder: Python 3.12.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: How hard do you think the fix is?
+      description: |
+        `easy` - a small change in one place, `medium` - several places or edge
+        cases, `hard` - concurrency, state or the whole build.
+      options:
+        - easy
+        - medium
+        - hard
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see? Include the exact terminal output.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can somebody else see it?
+      description: |
+        The exact commands, the URL list you used and everything that is needed
+        to see the problem again.
+      placeholder: |
+        python url-status-checker.py -l urls.txt
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, logs, or the part of the output that is wrong.
+    validations:
+      required: false

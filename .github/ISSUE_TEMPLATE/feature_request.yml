@@ -1,0 +1,75 @@
+name: Feature request
+description: Suggest a new feature or a bigger improvement for PingPanda
+title: "[feature] "
+labels: ["soc-s1", "type:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature!
+
+        Please check the issue list first, somebody may have suggested the same
+        thing already.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One sentence, what should PingPanda be able to do?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: How hard do you think this is?
+      options:
+        - easy
+        - medium
+        - hard
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of work is this?
+      options:
+        - feature
+        - docs
+        - test
+        - refactor
+        - devex
+        - performance
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Which problem does this solve?
+      description: Describe the situation you are in, not the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What should the tool do instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Examples of the output you would like to see.
+    validations:
+      required: false

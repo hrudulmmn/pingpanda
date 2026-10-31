@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+.venv/
+venv/
+env/
+
+# Tests and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+*.rej
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local output of the tool
+results.txt
+report.txt
+urls.txt
+*.log
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Organiser material, kept out of the public repository
+EVENT_PREP/
